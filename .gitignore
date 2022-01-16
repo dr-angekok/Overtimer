@@ -1,0 +1,5 @@
+.idea/
+dist/
+overtimer/__pycache__/
+*.pyc
+.coverage
