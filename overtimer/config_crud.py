@@ -3,7 +3,6 @@ import os
 from pathlib import Path
 
 
-
 class CrudConfig:
     def __init__(self, path=os.getcwd()):
         self.config = configparser.ConfigParser()

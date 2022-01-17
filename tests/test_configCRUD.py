@@ -34,4 +34,3 @@ def test_load():
     assert config.person_list_path == 'tests/fixtures/persons.xlsx'
     assert config.orders_path == 'tests/fixtures/orders.xlsx'
     assert config.chief == 'ФИО'
-
