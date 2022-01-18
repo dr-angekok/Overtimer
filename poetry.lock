@@ -684,7 +684,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "92dfe2bf45be0481ff66c324b1ffca09ae8f1dcb0646885caa673dabded23bbb"
+content-hash = "789702076aa4aad785f8a198f91d183f998453bcfd8443809d0540e8dc398794"
 
 [metadata.files]
 altgraph = [
