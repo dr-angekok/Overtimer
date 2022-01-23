@@ -25,7 +25,7 @@ pytest-cov = "^3.0.0"
 wily = "^1.20.0"
 
 [tool.poetry.scripts]
-overtimer = "overtimer.overtimer:main"
+overtimer = "overtimer.__main__:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
