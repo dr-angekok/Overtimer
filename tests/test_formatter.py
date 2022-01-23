@@ -1,5 +1,6 @@
 from overtimer.formaters import make_docx
-from os import path
+from os import listdir, path
+import datetime
 
 
 def test_make_docx(tmpdir):
@@ -16,5 +17,9 @@ def test_make_docx(tmpdir):
             'minut': '00',
     }
     contexts = (context for _ in range(3))
-    make_docx(contexts, 'text.docx', tmpdir)
-    assert path.isfile(path.join(tmpdir, 'text.docx'))
+    today = datetime.datetime.today()
+    filename = '{}.docx'.format(today.strftime("%d%b%Y"))
+    make_docx(contexts, tmpdir)
+    assert path.isfile(path.join(tmpdir, filename))
+    count = len([f for f in listdir(tmpdir) if path.isfile(path.join(tmpdir, f))])
+    assert count == 1
