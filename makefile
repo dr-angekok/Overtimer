@@ -25,7 +25,10 @@ extended-test:
 	poetry run pytest -vv
 
 test-coverage:
-	poetry run pytest --cov=page_loader --cov-report xml
+	poetry run pytest --cov=overtimer --cov-report xml
+
+test-cov-report:
+	poetry run pytest --cov=overtimer
 
 update:
 	poetry update

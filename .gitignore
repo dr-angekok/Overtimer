@@ -4,3 +4,4 @@ overtimer/__pycache__/
 *.pyc
 .coverage
 settings.ini
+coverage.xml
