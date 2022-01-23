@@ -5,6 +5,7 @@ PERSONAL_FILENAME = 'tests/fixtures/persons.xls'
 ORDER_FILENAME = 'tests/fixtures/orders.xlsx'
 SETTINGS_INI_PATH = 'tests/fixtures'
 
+
 def test_core():
     today = datetime.datetime.today()
     config = config_crud.CrudConfig(SETTINGS_INI_PATH)

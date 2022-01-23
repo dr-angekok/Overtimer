@@ -1,4 +1,4 @@
-import UI
+from overtimer import UI
 
 
 def main():
