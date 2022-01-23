@@ -36,4 +36,3 @@ def make_docx(contexts, folder=os.getcwd()):
         core_paragraph._p.addnext(new_table)
         os.remove(filename)
     core_doc.save(os.path.join(folder, core_filename))
-    print(os.path.join(folder, core_filename))
