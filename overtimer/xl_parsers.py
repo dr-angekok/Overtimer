@@ -2,7 +2,7 @@ import pandas as pd
 import datetime
 
 
-def personal_parser(filename):
+def get_personal_df(filename):
     data = pd.ExcelFile(filename).parse(sheet_name=0, skiprows=13)
     data.columns = list('ABCDEFGHIJKLMNOP')
     data.drop(

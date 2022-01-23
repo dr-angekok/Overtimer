@@ -5,7 +5,7 @@ ORDER_FILENAME = 'tests/fixtures/orders.xlsx'
 
 
 def test_personal_parser():
-    test_data = xl_parsers.personal_parser(PERSONAL_FILENAME)
+    test_data = xl_parsers.get_personal_df(PERSONAL_FILENAME)
     assert test_data.shape == (7, 3)
     for item in test_data.columns:
         assert item in ['names', 'numbers', 'hours']
