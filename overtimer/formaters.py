@@ -6,8 +6,6 @@ import random
 import string
 from copy import deepcopy
 
-TEMPLATE_PATH = 'templates/template.docx'
-
 
 def get_tempfile_name(temp_dir_path):
     letters = string.ascii_lowercase
@@ -15,12 +13,12 @@ def get_tempfile_name(temp_dir_path):
     return os.path.join(temp_dir_path, rand_string)
 
 
-def make_docx(contexts, folder=os.getcwd()):
+def make_docx(contexts, template_path, folder=os.getcwd()):
     templ_filenames = []
     today = datetime.datetime.today()
     core_filename = '{}.docx'.format(today.strftime("%d%b%Y"))
     for context in contexts:
-        document = DocxTemplate(TEMPLATE_PATH)
+        document = DocxTemplate(template_path)
         document.render(context)
         temp_name = get_tempfile_name(folder)
         document.save(temp_name)

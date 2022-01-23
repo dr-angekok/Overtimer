@@ -60,7 +60,7 @@ def main():
     order_number = xl_parsers.get_order_number(config.orders_path)
     persons_data = xl_parsers.get_personal_df(config.person_list_path)
 
-    formaters.make_docx(core.make_contexts(order_number, persons_data, config.chief))
+    formaters.make_docx(core.make_contexts(order_number, persons_data, config.chief), config.template_path)
 
 
 if __name__ == '__main__':

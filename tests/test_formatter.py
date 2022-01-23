@@ -2,6 +2,7 @@ from overtimer.formaters import make_docx
 from os import listdir, path
 import datetime
 
+TEMPLATE_PATH = 'tests/fixtures/template.docx'
 
 def test_make_docx(tmpdir):
     context = {
@@ -19,7 +20,7 @@ def test_make_docx(tmpdir):
     contexts = (context for _ in range(3))
     today = datetime.datetime.today()
     filename = '{}.docx'.format(today.strftime("%d%b%Y"))
-    make_docx(contexts, tmpdir)
+    make_docx(contexts, TEMPLATE_PATH, tmpdir)
     assert path.isfile(path.join(tmpdir, filename))
     count = len([f for f in listdir(tmpdir) if path.isfile(path.join(tmpdir, f))])
     assert count == 1
