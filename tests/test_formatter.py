@@ -4,6 +4,7 @@ import datetime
 
 TEMPLATE_PATH = 'tests/fixtures/template.docx'
 
+
 def test_make_docx(tmpdir):
     context = {
             'tabn': 12345,
