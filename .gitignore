@@ -3,3 +3,4 @@ dist/
 overtimer/__pycache__/
 *.pyc
 .coverage
+settings.ini
