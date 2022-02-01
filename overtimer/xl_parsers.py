@@ -30,7 +30,7 @@ def get_order_number(filename):
     sheets = pd.ExcelFile(filename)
     frames = []
     for sheet_name in sheets.sheet_names:
-        sheet = sheets.parse(sheet_name)
+        sheet = sheets.parse(sheet_name, header=None)
         sheet.dropna(inplace=True)
         if sheet.shape[0] and sheet.shape[1] == 3:
             sheet.drop(sheet.columns[[0]], axis=1, inplace=True)
